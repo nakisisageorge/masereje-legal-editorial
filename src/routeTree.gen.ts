@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PrivacyNoticeRouteImport } from './routes/privacy-notice'
+import { Route as WebsiteDisclaimerRouteImport } from './routes/website-disclaimer'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
+import { Route as PracticeAreasIndexRouteImport } from './routes/practice-areas.index'
+import { Route as PracticeAreasSlugRouteImport } from './routes/practice-areas.$slug'
+import { Route as TeamIndexRouteImport } from './routes/team.index'
+import { Route as TeamRichardMaserejeRouteImport } from './routes/team.richard-masereje'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyNoticeRoute = PrivacyNoticeRouteImport.update({
+  id: '/privacy-notice',
+  path: '/privacy-notice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteDisclaimerRoute = WebsiteDisclaimerRouteImport.update({
+  id: '/website-disclaimer',
+  path: '/website-disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
+  id: '/insights/',
+  path: '/insights/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/insights/$slug',
+  path: '/insights/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeAreasIndexRoute = PracticeAreasIndexRouteImport.update({
+  id: '/practice-areas/',
+  path: '/practice-areas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeAreasSlugRoute = PracticeAreasSlugRouteImport.update({
+  id: '/practice-areas/$slug',
+  path: '/practice-areas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamIndexRoute = TeamIndexRouteImport.update({
+  id: '/team/',
+  path: '/team/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRichardMaserejeRoute = TeamRichardMaserejeRouteImport.update({
+  id: '/team/richard-masereje',
+  path: '/team/richard-masereje',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-notice': typeof PrivacyNoticeRoute
+  '/website-disclaimer': typeof WebsiteDisclaimerRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/team/richard-masereje': typeof TeamRichardMaserejeRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/practice-areas/': typeof PracticeAreasIndexRoute
+  '/team/': typeof TeamIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-notice': typeof PrivacyNoticeRoute
+  '/website-disclaimer': typeof WebsiteDisclaimerRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/team/richard-masereje': typeof TeamRichardMaserejeRoute
+  '/insights': typeof InsightsIndexRoute
+  '/practice-areas': typeof PracticeAreasIndexRoute
+  '/team': typeof TeamIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-notice': typeof PrivacyNoticeRoute
+  '/website-disclaimer': typeof WebsiteDisclaimerRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/team/richard-masereje': typeof TeamRichardMaserejeRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/practice-areas/': typeof PracticeAreasIndexRoute
+  '/team/': typeof TeamIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy-notice'
+    | '/website-disclaimer'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/team/richard-masereje'
+    | '/insights/'
+    | '/practice-areas/'
+    | '/team/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy-notice'
+    | '/website-disclaimer'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/team/richard-masereje'
+    | '/insights'
+    | '/practice-areas'
+    | '/team'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy-notice'
+    | '/website-disclaimer'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/team/richard-masereje'
+    | '/insights/'
+    | '/practice-areas/'
+    | '/team/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyNoticeRoute: typeof PrivacyNoticeRoute
+  WebsiteDisclaimerRoute: typeof WebsiteDisclaimerRoute
+  InsightsSlugRoute: typeof InsightsSlugRoute
+  PracticeAreasSlugRoute: typeof PracticeAreasSlugRoute
+  TeamRichardMaserejeRoute: typeof TeamRichardMaserejeRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
+  PracticeAreasIndexRoute: typeof PracticeAreasIndexRoute
+  TeamIndexRoute: typeof TeamIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-notice': {
+      id: '/privacy-notice'
+      path: '/privacy-notice'
+      fullPath: '/privacy-notice'
+      preLoaderRoute: typeof PrivacyNoticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website-disclaimer': {
+      id: '/website-disclaimer'
+      path: '/website-disclaimer'
+      fullPath: '/website-disclaimer'
+      preLoaderRoute: typeof WebsiteDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/': {
+      id: '/insights/'
+      path: '/insights'
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/insights/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice-areas/': {
+      id: '/practice-areas/'
+      path: '/practice-areas'
+      fullPath: '/practice-areas/'
+      preLoaderRoute: typeof PracticeAreasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice-areas/$slug': {
+      id: '/practice-areas/$slug'
+      path: '/practice-areas/$slug'
+      fullPath: '/practice-areas/$slug'
+      preLoaderRoute: typeof PracticeAreasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team/': {
+      id: '/team/'
+      path: '/team'
+      fullPath: '/team/'
+      preLoaderRoute: typeof TeamIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team/richard-masereje': {
+      id: '/team/richard-masereje'
+      path: '/team/richard-masereje'
+      fullPath: '/team/richard-masereje'
+      preLoaderRoute: typeof TeamRichardMaserejeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  PrivacyNoticeRoute: PrivacyNoticeRoute,
+  WebsiteDisclaimerRoute: WebsiteDisclaimerRoute,
+  InsightsSlugRoute: InsightsSlugRoute,
+  PracticeAreasSlugRoute: PracticeAreasSlugRoute,
+  TeamRichardMaserejeRoute: TeamRichardMaserejeRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
+  PracticeAreasIndexRoute: PracticeAreasIndexRoute,
+  TeamIndexRoute: TeamIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
